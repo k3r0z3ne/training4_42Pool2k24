@@ -1,4 +1,4 @@
-/*
+/*//////////////
 Ci-dessoys, directives de préprocesseur.
 ces lignes permettent d'ajouter des fichiers au projet,
 fichiers appelés "bibliothèque"
