@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) // équivalent de int main
 
     int niveauDeSanté;
     niveauDeSanté = 4.5;
-	
+
     printf("Il vous reste %d jours, niveau de santé à %d\n", joursRestants, niveauDeSanté);
     printf("3 jours plus tard\n");
     joursRestants = 9, niveauDeSanté = 1.5;
