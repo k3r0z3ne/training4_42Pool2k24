@@ -1,27 +1,40 @@
 #include <stdio.h>
 
-void    ft_sortint_tab(int *tab, int size)
+void    ft_sort_int_tab(int *tab, int size)
 {
     int i;
     int j;
-    int tmp[size];
+    int k;
 
-    j = size - 1;
     i = 0;
-    while(i < size)
+    j=i+1;
+    while(i < size - 1)
     {
-        tmp[j] = tab[i];
+        //j = i+1;
+        while(j < size)
+        {
+            if(tab[i] > tab[j])
+            {
+                k = tab[i];
+                tab[i] = tab[j];
+                tab[j] = k;
+            }
+            j++;
+            printf("%d\n", tab[j]);
+        }
         i++;
     }
-    while(tmp[j-1] < tmp[j] < tmp[j+1])
-    {
-        
-    }
-
+    
+    // int t = 0;
+    // while(t < size)
+    // {
+    // printf("%d\n", tab[t]);
+    // t++;
+    // }
 }
 
 int main()
-{   
+{
     int tab[5];
 
     tab[0] = 13;
@@ -29,7 +42,6 @@ int main()
     tab[2] = 65;
     tab[3] = 178;
     tab[4] = 9;
-
-    ft_sortint_tab(tab, 5);
+    ft_sort_int_tab(tab, 5);
     return(0);
 }
