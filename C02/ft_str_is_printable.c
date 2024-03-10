@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int ft_str_is_alpha(char *str)
+int ft_str_is_printable(char *str)
 {
     int i;
 
@@ -8,24 +8,22 @@ int ft_str_is_alpha(char *str)
     while(str[i] != '\0')
     {
         // printf("%d\n", str[i]);
-        // if(('A' > str[i] || 'z' < str[i]) || (str[i] > 'Z' && str[i] < 'a'))
-        if(str[i] < 'A' || 'z' < str[i] || (str[i] > 'Z' && str[i] < 'a'))
+        if(str[i] < 32)
         {
             return(0);
         }
         i++;
     }
-
     return(1);
 }
 
 int main()
 {
-    char *str = "bien34lebonjour";
+    char *str = "fzi56";
     int ret;
 
-    ret = ft_str_is_alpha(str);
+    ret = ft_str_is_printable(str);
     printf("%d\n", ret);
-
+    
     return(0);
 }
